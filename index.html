@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Heineken x PressPlay MKT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+        }
+        .total {
+            font-weight: bold;
+            color: green;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            max-width: 600px;
+            height: auto;
+        }
+        .factor-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .factor-title {
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="LOGO CALCULATOR.png" alt="Heineken x PressPlay MKT Logo">
+        <h1>Calculadora Heineken x PressPlay MKT</h1>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Costo Unitario ($)</th>
+                <th>Factor 1</th>
+                <th>Factor 2</th>
+                <th>Costo Total ($)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Servicio de Azafatas</td>
+                <td>50.00</td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Horas</div>
+                        <input type="number" value="4" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Azafatas</div>
+                        <input type="number" value="4" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td class="total-cost">800.00</td>
+            </tr>
+            <tr>
+                <td>Servicio de Coctelería</td>
+                <td>50.00</td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Horas</div>
+                        <input type="number" value="4" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Cócteleros</div>
+                        <input type="number" value="1" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td class="total-cost">200.00</td>
+            </tr>
+            <tr>
+                <td>Personal de Asistencia del Evento</td>
+                <td>50.00</td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Días</div>
+                        <input type="number" value="1" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Asistentes</div>
+                        <input type="number" value="2" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td class="total-cost">100.00</td>
+            </tr>
+            <tr>
+                <td>Servicio de DJ</td>
+                <td>400.00</td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Shows</div>
+                        <input type="number" value="1" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Días</div>
+                        <input type="number" value="1" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td class="total-cost">400.00</td>
+            </tr>
+            <tr>
+                <td>Helados (Dos Sabores)</td>
+                <td>4.00</td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Helados</div>
+                        <input type="number" value="100" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Eventos</div>
+                        <input type="number" value="1" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td class="total-cost">400.00</td>
+            </tr>
+             <tr>
+                <td>Cocteles</td>
+                <td>2.50</td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Unidades</div>
+                        <input type="number" value="100" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Eventos</div>
+                        <input type="number" value="1" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td class="total-cost">2.50</td>
+            </tr>
+            <tr>
+                <td>Transporte</td>
+                <td>200.00</td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Transportes</div>
+                        <input type="number" value="2" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Días</div>
+                        <input type="number" value="1" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td class="total-cost">400.00</td>
+            </tr>
+            <tr>
+                <td>Servicio de Montaje y Desmontaje</td>
+                <td>500.00</td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Eventos</div>
+                        <input type="number" value="1" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Montajes</div>
+                        <input type="number" value="1" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td class="total-cost">500.00</td>
+            </tr>
+            <tr>
+                <td>Limpieza de Uniforme</td>
+                <td>20.00</td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Limpiezas</div>
+                        <input type="number" value="1" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td>
+                    <div class="factor-container">
+                        <div class="factor-title">Cantidad de Días</div>
+                        <input type="number" value="1" oninput="calculateTotal()">
+                    </div>
+                </td>
+                <td class="total-cost">20.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Total del Proyecto: $<span id="grand-total">3070.00</span></h2>
+    <script>
+        function calculateTotal() {
+            const rows = document.querySelectorAll("tbody tr");
+            let grandTotal = 0;
+            rows.forEach(row => {
+                const unitCost = parseFloat(row.querySelector("td:nth-child(2)").textContent) || 0;
+                const factor1 = parseFloat(row.querySelector("td:nth-child(3) input").value) || 0;
+                const factor2 = parseFloat(row.querySelector("td:nth-child(4) input").value) || 0;
+                const totalCell = row.querySelector(".total-cost");
+                const total = unitCost * factor1 * factor2;
+                totalCell.textContent = total.toFixed(2);
+                grandTotal += total;
+            });
+            document.getElementById("grand-total").textContent = grandTotal.toFixed(2);
+        }
+    </script>
+</body>
+</html>
